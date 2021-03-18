@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  font-family: "Fredoka One";
+  margin-top: 5px;
+  text-align: center;
+}
+.requirments {
+  margin: 5% 5%;
+  width: 1fr;
+  font-family: "Lato";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.requirments div {
+  display: inline-block;
+  margin-top: 2px;
+}
+.requirments label {
+  margin-right: 5px;
+}
+.requirments button {
+  margin-top: 5px;
+  padding: 3px 5px;
+  background-color: rgb(58, 196, 58);
+  width: 30%;
+}

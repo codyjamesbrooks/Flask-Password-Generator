@@ -1,0 +1,34 @@
+{% extends 'base.html' %} 
+{% block head %}
+<title>Password Generator</title>
+{% endblock head %}
+{% block content %}
+<h1>Welcome to Codys Password Generator</h1>
+<form class="requirments" action='/' method='POST'>
+    <!-- Password Length -->
+    <div class="form-group">
+        <label for="length">How many characters would you like?</label>
+        <input type="text" id="length" name="length" placeholder="8-12"><br>
+    </div>
+
+    <!-- Numbers Requirment -->
+    <div class="form-group">
+        <label for="numbers">Does the Password need numbers?</label>
+        <input type='checkbox' id="numbers" name="numbers"><br>
+    </div>
+    
+    <!-- Special Char Requirment -->
+    <div class="form-group">
+        <label for="specialchar">Does the Password need Special Chars?</label>
+        <input type="checkbox" id="specialchar" name="specialchar"><br>
+    </div>
+
+    <!-- Uppercase Char Requirment -->
+    <div class="form-group">
+        <label for="uppercase">Does the password require Uppercase letters?</label>
+        <input type="checkbox" id="uppercase" name="uppercase"><br>
+    </div>
+    <button type="submit">Generate Password</button>
+</form>
+{% endblock content %}
+
