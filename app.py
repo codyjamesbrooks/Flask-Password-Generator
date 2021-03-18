@@ -10,21 +10,23 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == "POST":
-        # Get form inputs. These will tell us what elements to include
+
+        # Get form inputs. These will tell us what elements to include in the password
         password_length = int(request.form['length'])
         contain_numbers = request.form.get('numbers') == 'on'
         contain_specialchar = request.form.get('specialchar') == 'on'
         contain_uppercase = request.form.get('uppercase') == 'on'
 
+        # pass inputs to password generator function
         password = password_generator(
             password_length, contain_numbers, contain_specialchar, contain_uppercase)
-        print(password_length, contain_numbers,
-              contain_specialchar, contain_uppercase)
-        print(password)
 
-        return render_template('home.html')
+        # rerender template with the generated password included.
+        return render_template('home.html', password=password)
 
     else:
+
+        # Default template, form waiting for input
         return render_template('home.html')
 
 

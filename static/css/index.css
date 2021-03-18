@@ -3,9 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  margin-top: auto;
+}
 h1 {
   font-family: "Fredoka One";
-  margin-top: 5px;
+  margin-top: 10%;
   text-align: center;
 }
 .requirments {
@@ -29,4 +32,10 @@ h1 {
   padding: 3px 5px;
   background-color: rgb(58, 196, 58);
   width: 30%;
+}
+#password {
+  height: 50px;
+  text-align: center;
+  font-family: "Fredoka One";
+  letter-spacing: 0.2em;
 }

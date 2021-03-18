@@ -1,14 +1,17 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
+
 {% block head %}
 <title>Password Generator</title>
 {% endblock head %}
+
 {% block content %}
+
 <h1>Welcome to Codys Password Generator</h1>
 <form class="requirments" action='/' method='POST'>
     <!-- Password Length -->
     <div class="form-group">
         <label for="length">How many characters would you like?</label>
-        <input type="text" id="length" name="length" placeholder="8-12"><br>
+        <input type="text" id="length" name="length" placeholder="must be larger than 5" required><br>
     </div>
 
     <!-- Numbers Requirment -->
@@ -28,7 +31,15 @@
         <label for="uppercase">Does the password require Uppercase letters?</label>
         <input type="checkbox" id="uppercase" name="uppercase"><br>
     </div>
+
     <button type="submit">Generate Password</button>
+
 </form>
+
+<!-- Below DIV will display password after Python creates it -->
+<div id=password>
+    <h2>{{ password }}</h2>
+</div>
+
 {% endblock content %}
 
